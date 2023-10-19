@@ -83,7 +83,7 @@ module.exports.login = async function(req,res){
 
 // creating report of a patient
 module.exports.createReport = async function(req,res){
-    console.log('hello');
+    //console.log('hello');
     try {
         let patient = await Patient.findById(req.params.id);
             
