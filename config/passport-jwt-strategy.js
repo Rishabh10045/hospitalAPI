@@ -9,11 +9,11 @@ let opts = {
     jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
     secretOrKey: "covid"
 }
-console.log('hello');
-console.log(opts)
+// console.log('hello');
+// console.log(opts)
 // new strategy initialization
 passport.use(new JWTStrategy(opts, function(jwtPayload,done){
-    console.log('enter')
+    //console.log('enter')
     Doctor.findById(jwtPayload)
     .then(function(doc){
                 if(doc){
